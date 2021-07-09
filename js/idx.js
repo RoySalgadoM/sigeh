@@ -14,15 +14,15 @@ const alertaBuscar = () => {
 const descargar =()=>{
     let response = grecaptcha.getResponse();
     if(response.length != 0){
-        window.open("https://google.com/")
+        console.log("Hola")
     }else{
-        if (busqueda != '') {
+      
             Swal.fire({
                 icon: 'error',
                 title: `El captcha no ha sido aceptado`,
                 text: 'Deberá aceptar el captcha para continuar'
             })
-        }
+        
     }
 }
 
