@@ -16,6 +16,13 @@ const descargar =()=>{
     if(response.length != 0){
         window.open("https://google.com/")
     }else{
-        document.getElementById("status").innerHTML = "Acepta el captcha primero";
+        if (busqueda != '') {
+            Swal.fire({
+                icon: 'error',
+                title: `El captcha no ha sido aceptado`,
+                text: 'Deberá aceptar el captcha para continuar'
+            })
+        }
     }
 }
+
